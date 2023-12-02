@@ -1,0 +1,119 @@
+@font-face {
+    font-family: 'archiaregular';
+    src: url('archia-regular-webfont.eot');
+    src: url('archia-regular-webfont.eot?#iefix') format('embedded-opentype'),
+        url('archia-regular-webfont.woff2') format('woff2'),
+        url('archia-regular-webfont.woff') format('woff'),
+        url('archia-regular-webfont.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+    background-color: blue;
+    color: rgba(255, 255, 255, 0.85);
+    font-family: "archiaregular";
+    font-size: 1.6rem;
+}
+
+a {
+    color: white;
+    opacity: 0.8;
+    text-decoration: none;
+}
+
+a:hover {
+    opacity: 1;
+}
+
+.paragraph {
+    line-height: 2.4rem;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+
+.mainContainer {
+    max-width: 60vw;
+    padding-left: 6vw;
+    padding-top: 6vh;
+    padding-bottom: 4rem;
+}
+
+.linkListContainer {
+    width: 20vw;
+    height: fit-content;
+    position: fixed;
+    bottom: 0%;
+    right: 0%;
+    padding-top: 0.5rem;
+    padding-bottom: 5rem;
+    border-top: 1px solid white;
+
+}
+
+.linkListText {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.linkEsterni {
+    line-height: 60px;
+    text-decoration: none;
+}
+
+
+
+
+@media only screen and (max-width: 768px) {
+    body {
+        font-size: 1.2rem;
+        padding: 0px;
+        margin: 0px;
+    }
+
+    .paragraph {
+        line-height: 1.8rem;
+        margin-top: 2rem;
+        margin-bottom: 2rem;
+    }
+
+    .mainContainer {
+        max-width: 100vw;
+        padding-left: 5vw;
+        padding-right: 5vw;
+        padding-top: 3vh;
+        padding-bottom: 1rem;
+    }
+
+    .linkListContainer {
+        width: 100vw;
+        height: fit-content;
+        position: relative;
+        bottom: 0%;
+        right: 0%;
+        padding-top: 0rem;
+        padding-bottom: 1rem;
+        border-top: none;
+        font-size: 2rem;
+
+    }
+
+    .linkListText {
+        text-align: right;
+        width: 100vw;
+
+
+    }
+
+    .linkEsterni {
+        text-decoration: none;
+        width: Auto;
+        border-top: 1px solid white;
+        padding-right: 5vw;
+        line-height: 6rem;
+    }
+    .arrow{
+        display: inline-flex;
+    }
+}
