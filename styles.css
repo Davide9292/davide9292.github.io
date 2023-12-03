@@ -42,7 +42,7 @@ a:hover {
 
 .linkListContainer {
     width: 20vw;
-    height: 100%;
+    height: 100vw;
     position: fixed;
     bottom: 0%;
     right: 0%;
