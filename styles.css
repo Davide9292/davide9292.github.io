@@ -27,6 +27,15 @@ a:hover {
     opacity: 1;
 }
 
+.mainTitle {
+    margin-bottom: 0rem;
+}
+
+.secondaryTitle {
+    margin-top: 1rem;
+    font-size: 1.6rem;
+}
+
 .paragraph {
     line-height: 2.4rem;
     margin-top: 2rem;
@@ -50,19 +59,23 @@ a:hover {
     padding-bottom: 5rem;
     border-top: 1px solid white;
     border-left: 1px solid white;
-    vertical-align: bottom;
 
 }
 
 .linkListText {
     list-style-type: none;
+    width: 100%;
+    position: fixed;
     padding: 0;
     margin: 0;
+    bottom: 0;
 }
 
 .linkEsterni {
-    line-height: 60px;
+    line-height: 100px;
     text-decoration: none;
+    border-top: 1px solid white;
+    padding-left: 2vw;
 }
 
 
@@ -75,7 +88,8 @@ a:hover {
         margin: 0px;
         color: rgba(255, 255, 255, 0.73);
     }
-    .mainTitle{
+
+    .mainTitle {
         letter-spacing: -1px;
         color: rgba(255, 255, 255, 0.73);
     }
@@ -101,17 +115,19 @@ a:hover {
         bottom: 0%;
         right: 0%;
         padding-top: 0rem;
-        padding-bottom: 1rem;
+        padding-bottom: 0rem;
         border-top: none;
         font-size: 2rem;
-
+        border-left: none;
     }
 
     .linkListText {
         text-align: right;
         width: 100vw;
-
-
+        position: relative;
+        padding: 0;
+        margin: 0;
+        bottom: 0;
     }
 
     .linkEsterni {
@@ -121,7 +137,8 @@ a:hover {
         padding-right: 5vw;
         line-height: 6rem;
     }
-    .arrow{
+
+    .arrow {
         display: inline-flex;
     }
 }
