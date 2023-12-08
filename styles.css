@@ -5,21 +5,28 @@
         url('archia-regular-webfont.woff2') format('woff2'),
         url('archia-regular-webfont.woff') format('woff'),
         url('archia-regular-webfont.ttf') format('truetype');
+
     font-weight: normal;
     font-style: normal;
 }
+/*@font-face {
+    font-family: 'syne';
+    src: url('Syne-VariableFont_wght.ttf') format('truetype');
+}*/
+
 
 body {
     background-color: #1700FF;
-    color: rgba(255, 255, 255, 0.85);
+    color: white;
     font-family: "archiaregular";
-    font-size: 1.6rem;
+    font-size: 3rem;
     height: fit-content;
+    margin: 0;
+    padding: 0;
 }
 
 a {
     color: white;
-    opacity: 0.8;
     text-decoration: none;
 }
 
@@ -27,25 +34,29 @@ a:hover {
     opacity: 1;
 }
 
-.mainTitle {
+.mainTitle{
+    font-weight: 700;
     margin-bottom: 0rem;
+    font-size: 3rem;
+    letter-spacing:normal;
+    font-weight:100;
 }
 
-.secondaryTitle {
-    margin-top: 1rem;
-    font-size: 1.6rem;
+.secondaryTitle{
+    margin-top: 0.5rem;
+    font-size: 3rem;
 }
 
 .paragraph {
-    line-height: 2.4rem;
-    margin-top: 2rem;
-    margin-bottom: 2rem;
+    line-height: 3.7rem;
+    margin-top: 3rem;
+    margin-bottom: 3rem;
 }
 
 .mainContainer {
-    max-width: 60vw;
-    padding-left: 6vw;
-    padding-top: 6vh;
+    max-width: 65vw;
+    padding-left: 5vw;
+    padding-top: 3vh;
     padding-bottom: 4rem;
 }
 
@@ -57,6 +68,7 @@ a:hover {
     right: 0%;
     padding-top: 0.5rem;
     padding-bottom: 5rem;
+    background-color: #1700FF;
     border-top: 1px solid white;
     border-left: 1px solid white;
 
@@ -73,9 +85,11 @@ a:hover {
 
 .linkEsterni {
     line-height: 100px;
+    font-size: 2rem;
     text-decoration: none;
     border-top: 1px solid white;
     padding-left: 2vw;
+    align-items: end;
 }
 
 
@@ -85,13 +99,16 @@ a:hover {
     body {
         font-size: 1.2rem;
         padding: 0px;
-        margin: 0px;
-        color: rgba(255, 255, 255, 0.73);
+        margin-top: 5vh;
     }
 
     .mainTitle {
-        letter-spacing: -1px;
-        color: rgba(255, 255, 255, 0.73);
+        font-size: 1.2rem;
+        line-height: 1.8rem;
+    }
+
+    .secondaryTitle{
+        font-size: 1.2rem;
     }
 
     .paragraph {
@@ -104,7 +121,7 @@ a:hover {
         max-width: 100vw;
         padding-left: 5vw;
         padding-right: 5vw;
-        padding-top: 2vh;
+        padding-top: 0vh;
         padding-bottom: 1rem;
     }
 
@@ -140,5 +157,77 @@ a:hover {
 
     .arrow {
         display: inline-flex;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+.portfolio-module {
+    max-width: 80vw;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content:start;
+    background-color: white;
+    padding-top:0.1vw ;
+}
+
+.portfolio-tile {
+    width: 26.5555vw; /* 3 columns on desktop */
+    margin-left: 0.1vw;
+    margin-bottom: 0.1vw;
+    text-align: left;
+}
+
+.image-mask {
+    overflow: hidden;
+    width: 100%;
+    padding-top: 100%; /* 1:1 aspect ratio */
+    position: relative;
+    /*border-radius: 8px;  Optional: add a border radius for rounded corners */
+}
+
+.portfolio-tile img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transform: scale(1);
+    transition: transform 0.3s ease-in-out;
+}
+
+/*.portfolio-tile:hover img {
+    transform: scale(1.1);
+}*/
+
+.portfolio-tile h3 {
+    margin: 10px 0;
+    font-size: 18px;
+    color: rgba(255, 255, 255, 0.85);; /* Adjust the color as needed */
+}
+
+#tapis {
+    background-color: black;
+}
+
+
+
+@media screen and (max-width: 768px) {
+    .portfolio-tile {
+        width: 50%; /* 1 column on mobile */
+        margin-left: 0vw;
+        margin-bottom: 0vw;
+    }
+    .portfolio-module {
+        max-width:initial;
+        border-top: 1px solid white;
     }
 }
