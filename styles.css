@@ -238,7 +238,7 @@ a:hover {
     }
 
     .img-mbl {
-        display:initial;
+        display:block;
     }
 
 }
