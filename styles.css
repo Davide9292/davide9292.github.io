@@ -236,4 +236,9 @@ a:hover {
     .img-dsk {
         display: none;
     }
+
+    .img-mbl {
+        display:initial;
+    }
+
 }
