@@ -1,3 +1,8 @@
+:root {
+    --bianco: white;
+    --blu: #1700FF;
+}
+
 @font-face {
     font-family: 'archiaregular';
     src: url('archia-regular-webfont.eot');
@@ -5,29 +10,59 @@
         url('archia-regular-webfont.woff2') format('woff2'),
         url('archia-regular-webfont.woff') format('woff'),
         url('archia-regular-webfont.ttf') format('truetype');
-
     font-weight: normal;
     font-style: normal;
 }
-/*@font-face {
+
+@font-face {
+    font-family: 'hanken-grotesk';
+    src: url('HankenGrotesk-Regular.ttf') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'hanken-grotesk';
+    src: url('HankenGrotesk-SemiBold.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'hanken-grotesk';
+    src: url('HankenGrotesk-Bold.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'hanken-grotesk';
+    src: url('HankenGrotesk-ExtraBold.ttf') format('truetype');
+    font-weight: 600;
+    font-style: normal;
+}
+
+@font-face {
     font-family: 'syne';
     src: url('Syne-VariableFont_wght.ttf') format('truetype');
-}*/
+}
 
 
 body {
-    background-color: #1700FF;
-    color: white;
-    font-family: "archiaregular";
-    font-size: 3rem;
+    background-color: var(--bianco);
+    color: var(--blu);
+    font-family: "hanken-grotesk";
+    font-weight: 300;
+    font-size: 6rem;
+    letter-spacing: -0.03rem;
     height: fit-content;
     margin: 0;
-    margin-top: 2rem;
+    margin-top: 4rem;
     padding: 0;
 }
 
 a {
-    color: white;
+    color: var(--blu);
     text-decoration: none;
 }
 
@@ -35,44 +70,96 @@ a:hover {
     opacity: 1;
 }
 
-.mainTitle{
-    font-weight: 700;
-    margin-bottom: 0rem;
-    font-size: 3rem;
-    letter-spacing:normal;
-    font-weight:100;
-}
 
-.secondaryTitle{
-    margin-top: 0.5rem;
-    font-size: 3rem;
+.mainTitle {
+    font-family: 'hanken-grotesk';
+    text-transform: initial;
+    font-weight: 300;
+    font-size: 6rem;
+    letter-spacing: -0.05rem;
+    margin-top: 63px;
 }
 
 .paragraph {
-    line-height: 3.8rem;
-    margin-top: 3rem;
-    margin-bottom: 3rem;
+    line-height: 126px;
+    margin-top: 126px;
+    letter-spacing: -0.05rem;
 }
 
+
 .mainContainer {
-    max-width: 65vw;
-    padding-left: 5vw;
-    padding-top: 2rem;
-    padding-bottom: 2rem;
+    max-width: 80vw;
+    margin-left: 2vw;
+}
+
+.highlightContainer {
+    background-color: var(--bianco);
+    color: var(--blu);
+    width: 75vw;
+    padding-left: 2.5vw;
+    padding-right: 2.5vw;
+    border-left: 1px solid var(--blu);
+}
+
+.label {
+    font-weight: 500;
+    letter-spacing: 0.1rem;
+    background-color: var(--bianco);
+    color: var(--blu);
+    padding: 4px;
+    padding-left: 8px;
+    padding-right: 8px;
+    font-size: 0.8rem;
+    border-radius: 8px;
+    display: flex;
+    flex-wrap: wrap;
+    width: fit-content;
+    margin-bottom: 0.8rem;
+    border: 1px solid var(--blu);
+}
+
+.highlight {
+    background-color: var(--blu);
+    color: var(--bianco);
+    border-radius: 12px;
+    -webkit-box-decoration-break: clone;
+    box-decoration-break: clone;
+    padding: 0 8px 0 8px;
+    width: 80vw;
+    border-bottom: 1px solid var(--bianco);
+    border-top: 1px solid var(--bianco);
+}
+
+.noHighlight {
+    background-color: var(--bianco);
+    color: var(--blu);
+    -webkit-box-decoration-break: clone;
+    box-decoration-break: clone;
+    border-bottom: 1px solid var(--blu);
+    border-top: 1px solid var(--blu);
+}
+
+.sticky {
+    position: sticky;
+    bottom: 0rem;
 }
 
 .linkListContainer {
-    width: 20vw;
+    width: 15vw;
     height: 100%;
     position: fixed;
     bottom: 0%;
     right: 0%;
     padding-top: 0.5rem;
     padding-bottom: 5rem;
-    background-color: #1700FF;
-    border-top: 1px solid white;
-    border-left: 1px solid white;
-
+    background-color: var(--bianco);
+    border-top: 1px solid var(--blu);
+    border-left: 1px solid var(--blu);
+    -webkit-transition: padding 0.2s ease;
+    -moz-transition: padding 0.2s ease;
+    -ms-transition: padding 0.2s ease;
+    -o-transition: padding 0.2s ease;
+    transition:  padding 0.2s ease-out;
 }
 
 .linkListText {
@@ -88,44 +175,84 @@ a:hover {
     line-height: 100px;
     font-size: 2rem;
     text-decoration: none;
-    border-top: 1px solid white;
+    border-top: 1px solid var(--blu);
     padding-left: 2vw;
     align-items: end;
+    -webkit-transition: padding 0.2s ease;
+    -moz-transition: padding 0.2s ease;
+    -ms-transition: padding 0.2s ease;
+    -o-transition: padding 0.2s ease;
+    transition:  padding 0.2s ease-out;
 }
 
-.img-mbl{
-    display: none;
+.linkEsterni:hover .freccia {
+    padding-left: 10px;    
+    -webkit-transition: padding 0.2s ease;
+    -moz-transition: padding 0.2s ease;
+    -ms-transition: padding 0.2s ease;
+    -o-transition: padding 0.2s ease;
+    transition:  padding 0.2s ease-out;
 }
+
+.linkEsterni:before .freccia {
+    padding-left: 10px;    
+    -webkit-transition: padding 0.2s ease;
+    -moz-transition: padding 0.2s ease;
+    -ms-transition: padding 0.2s ease;
+    -o-transition: padding 0.2s ease;
+    transition:  padding 0.2s ease-out;
+}
+
+.linkEsterni:hover:before .freccia {
+    padding-left: 10px;    
+    -webkit-transition: padding 0.2s ease;
+    -moz-transition: padding 0.2s ease;
+    -ms-transition: padding 0.2s ease;
+    -o-transition: padding 0.2s ease;
+    transition:  padding 0.2s ease-out;
+}
+
+.freccia{
+    padding:0px;
+    font-family: 'archiaregular';
+    -webkit-transition: padding 0.2s ease;
+    -moz-transition: padding 0.2s ease;
+    -ms-transition: padding 0.2s ease;
+    -o-transition: padding 0.2s ease;
+    transition:  padding 0.2s ease-out;
+}
+
+
+
 
 
 @media only screen and (max-width: 768px) {
     body {
-        font-size: 1.2rem;
+        font-size: 32px;
         padding: 0px;
-        margin-top: 5vh;
+        margin-top: 3vh;
+        margin-bottom: ;
     }
 
     .mainTitle {
-        font-size: 1.2rem;
-        line-height: 1.8rem;
-    }
-
-    .secondaryTitle{
-        font-size: 1.2rem;
+        font-size: 32px;
+        line-height: 43px;
+        margin-top: 43px;
+        padding-bottom: 0px;
     }
 
     .paragraph {
-        line-height: 1.8rem;
-        margin-top: 2rem;
-        margin-bottom: 2rem;
+        line-height: 43px;
+        margin-top: 43px;
+        margin-bottom: 0px;
     }
 
     .mainContainer {
         max-width: 100vw;
-        padding-left: 5vw;
-        padding-right: 5vw;
-        padding-top: 0vh;
-        padding-bottom: 1rem;
+        padding-left: 0px;
+        padding-right: 0px;
+        padding-top: 0px;
+        margin: 0 16px 0 16px
     }
 
     .linkListContainer {
@@ -139,6 +266,7 @@ a:hover {
         border-top: none;
         font-size: 2rem;
         border-left: none;
+        margin-top: 43px;
     }
 
     .linkListText {
@@ -153,7 +281,7 @@ a:hover {
     .linkEsterni {
         text-decoration: none;
         width: Auto;
-        border-top: 1px solid white;
+        border-top: 1px solid var(--blu);
         padding-right: 5vw;
         line-height: 6rem;
     }
@@ -173,25 +301,26 @@ a:hover {
 
 
 .portfolio-module {
-    max-width: 80vw;
+    overflow: hidden;
+    margin-left: 2vw;
+    width: 80vw;
     display: flex;
     flex-wrap: wrap;
-    justify-content:start;
-    background-color: white;
-    padding-top:0.1vw ;
+    justify-content: center;
+    border-radius: 32px;
 }
 
 .portfolio-tile {
-    width: calc(80vw/4.02); /* 3 columns on desktop */
-    margin-left: 0.1vw;
-    margin-bottom: 0.1vw;
+    width: calc(100%/4);
+    /* 3 columns on desktop */
     text-align: left;
 }
 
 .image-mask {
     overflow: hidden;
     width: 100%;
-    padding-top: 100%; /* 1:1 aspect ratio */
+    padding-top: 100%;
+    /* 1:1 aspect ratio */
     position: relative;
     /*border-radius: 8px;  Optional: add a border radius for rounded corners */
 }
@@ -214,7 +343,9 @@ a:hover {
 .portfolio-tile h3 {
     margin: 10px 0;
     font-size: 18px;
-    color: rgba(255, 255, 255, 0.85);; /* Adjust the color as needed */
+    color: rgba(255, 255, 255, 0.85);
+    ;
+    /* Adjust the color as needed */
 }
 
 
@@ -222,24 +353,22 @@ a:hover {
 
 
 @media screen and (max-width: 768px) {
+    .portfolio-module {
+        width: 100vw;
+        margin-left: 0vw;
+        margin-top: 21px;
+        border-radius: 0px;
+    }
+
     .portfolio-tile {
-        width: 100%; /* 1 column on mobile */
+        width: 100%;
+        /* 1 column on mobile */
         margin-left: 0vw;
         margin-bottom: 0vw;
-        border-bottom: 1px solid white;
-    }
-    .portfolio-module {
-        max-width:initial;
-        border-top: 1px solid white;
         border-bottom: 1px solid white;
     }
 
     .img-dsk {
         display: none;
     }
-
-    .img-mbl {
-        display:block;
-    }
-
 }
