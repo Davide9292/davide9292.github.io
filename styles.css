@@ -14,44 +14,28 @@
     font-style: normal;
 }
 
+
+
 @font-face {
-    font-family: 'hanken-grotesk';
-    src: url('HankenGrotesk-Regular.ttf') format('truetype');
+    font-family: 'inter';
+    src: url('Inter-Regular.ttf') format('truetype');
     font-weight: 300;
     font-style: normal;
 }
 
 @font-face {
-    font-family: 'hanken-grotesk';
-    src: url('HankenGrotesk-SemiBold.ttf') format('truetype');
-    font-weight: 400;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: 'hanken-grotesk';
-    src: url('HankenGrotesk-Bold.ttf') format('truetype');
-    font-weight: 500;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: 'hanken-grotesk';
-    src: url('HankenGrotesk-ExtraBold.ttf') format('truetype');
+    font-family: 'inter';
+    src: url('Inter-Bold.ttf') format('truetype');
     font-weight: 600;
     font-style: normal;
 }
 
-@font-face {
-    font-family: 'syne';
-    src: url('Syne-VariableFont_wght.ttf') format('truetype');
-}
 
 
 body {
     background-color: var(--bianco);
     color: var(--blu);
-    font-family: "hanken-grotesk";
+    font-family: "inter";
     font-weight: 300;
     font-size: 6rem;
     letter-spacing: -0.03rem;
@@ -73,18 +57,18 @@ a:hover {
 
 
 .mainTitle {
-    font-family: 'hanken-grotesk';
+    font-family: 'inter';
     text-transform: initial;
     font-weight: 300;
     font-size: 6rem;
-    letter-spacing: -0.05rem;
+    letter-spacing: -0.1rem;
     margin-top: 63px;
 }
 
 .paragraph {
-    line-height: 126px;
-    margin-top: 126px;
-    letter-spacing: -0.05rem;
+    line-height: 117px;
+    margin-top: 117px;
+    letter-spacing: -0.1rem;
 }
 
 ::selection {
@@ -179,7 +163,7 @@ a:hover {
 
 .linkEsterni {
     line-height: 100px;
-    font-size: 2rem;
+    font-size: 28px;
     text-decoration: none;
     border-top: 1px solid var(--blu);
     padding-left: 2vw;
@@ -234,32 +218,55 @@ a:hover {
 
 @media only screen and (max-width: 768px) {
     body {
-        font-size: 30px;
+        font-size: 36px;
         padding: 0px;
         margin-top: 3vh;
     }
 
     .mainTitle {
-        font-size: 30px;
-        line-height: 39px;
-        margin-top: 43px;
+        font-size: 36px;
+        line-height: 45px;
+        margin-top: 45px;
         padding-bottom: 0px;
     }
 
     .paragraph {
-        line-height: 39px;
-        margin-top: 43px;
+        line-height: 45px;
+        margin-top: 45px;
         margin-bottom: 0px;
+        width:100%;
     }
 
     .mainContainer {
-        width: 100vw;
+        max-width: 100%;
         padding-left: 0px;
         padding-right: 0px;
         padding-top: 0px;
-        padding: 0 3vw 0 3vw;
+        padding: 0 4vw 0 4vw;
         margin: 0;
     }
+
+    .highlight {
+        background-color: var(--blu);
+        color: var(--bianco);
+        border-radius: 12px;
+        -webkit-box-decoration-break: clone;
+        box-decoration-break: clone;
+        padding: 0 8px 0 8px;
+        width: 80vw;
+        border-bottom: 1px solid var(--bianco);
+        border-top: none;
+    }
+
+    .noHighlight {
+        background-color: var(--bianco);
+        color: var(--blu);
+        -webkit-box-decoration-break: clone;
+        box-decoration-break: clone;
+        border-bottom: 1px solid var(--blu);
+        border-top: none;
+    }
+
 
     .linkListContainer {
         width: 100vw;
@@ -270,7 +277,7 @@ a:hover {
         padding-top: 0rem;
         padding-bottom: 0rem;
         border-top: none;
-        font-size: 2rem;
+        font-size: 36px;
         border-left: none;
         margin-top: 43px;
     }
@@ -290,6 +297,7 @@ a:hover {
         border-top: 1px solid var(--blu);
         padding-right: 5vw;
         line-height: 6rem;
+        font-size: 36px;
     }
 
     .arrow {
