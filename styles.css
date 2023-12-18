@@ -36,7 +36,7 @@ body {
     background-color: var(--bianco);
     color: var(--blu);
     font-family: "inter";
-    font-weight: 300;
+    font-weight: 400;
     font-size: 6rem;
     letter-spacing: -0.03rem;
     height: fit-content;
@@ -59,7 +59,7 @@ a:hover {
 .mainTitle {
     font-family: 'inter';
     text-transform: initial;
-    font-weight: 300;
+    font-weight: 400;
     font-size: 6rem;
     letter-spacing: -0.1rem;
     margin-top: 63px;
